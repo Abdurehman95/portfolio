@@ -254,8 +254,8 @@ document.addEventListener("DOMContentLoaded", () => {
     } else clearError("email");
 
     // Subject
-    if (fields.subject.value.trim().length < 3) {
-      showError("subject", "Subject must be at least 3 characters.");
+    if (fields.subject.value.trim().length < 5) {
+      showError("subject", "Subject must be at least 5 characters.");
       isValid = false;
     } else clearError("subject");
 
@@ -302,17 +302,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// // email sending
-// function sendEmail(){
-//     const templateParams={
-//         name : document.getElementById("#name").value,
-//         email :document.getElementById("#email").value,
-//         subject :document.getElementById("#subject").value,
-//         message :document.getElementById("#message").value,
-//     };
-//     emailjs.send("service_6oun63i","template_l8b2qvw",templateParams).then(()=>{
-//         alert("Email sent successfully!!!").catch(()=> alert("email not sent!!!"));
-//     })
-    
-// }
 
